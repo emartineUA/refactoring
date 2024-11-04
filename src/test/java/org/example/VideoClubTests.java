@@ -32,8 +32,8 @@ public class VideoClubTests {
 
     @Test
     public void testCustomer() {
-        Customer customer = new Customer("domingogallardo");
-        assertThat(customer.getName(), equalTo("domingogallardo"));
+        Customer customer = new Customer("emartineUA");
+        assertThat(customer.getName(), equalTo("emartineUA"));
     }
 
     @Test
@@ -41,14 +41,14 @@ public class VideoClubTests {
         Customer customer = new Customer("domingogallardo");
         String statement = customer.statement();
         assertThat(statement, allOf(
-                containsString("Rental Record for domingogallardo"),
+                containsString("Rental Record for emartineUA"),
                 containsString("Amount owed is 0.0"),
                 containsString("You earned 0 frequent renter points")));
     }
 
     @Test
     public void testCustomerFullStatement() {
-        Customer customer = new Customer("domingogallardo");
+        Customer customer = new Customer("emartineUA");
         Movie tenet = new Movie("Tenet", Movie.NEW_RELEASE);
         Movie busan = new Movie("Train to Busan", Movie.REGULAR);
         Movie padre = new Movie("Padre no hay más que uno", Movie.CHILDRENS);
@@ -62,7 +62,7 @@ public class VideoClubTests {
         customer.addRental(rental3);
 
         assertThat(customer.statement(), allOf(
-                containsString("Rental Record for domingogallardo"),
+                containsString("Rental Record for emartineUA"),
                 stringContainsInOrder("Tenet", "6.0"),
                 stringContainsInOrder("Train to Busan", "2.0"),
                 stringContainsInOrder("Padre no hay más que uno", "1.5"),
