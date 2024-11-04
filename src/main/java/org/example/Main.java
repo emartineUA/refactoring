@@ -1,4 +1,4 @@
-package org.example;
+ipackage org.example;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class Main {
         Rental rental2 = new Rental(busan, 2);
         Rental rental3 = new Rental(padre, 1);
 
-        Customer customer = new Customer("domingogallardo");
+        Customer customer = new Customer("emartineUA");
 
         customer.addRental(rental1);
         customer.addRental(rental2);
